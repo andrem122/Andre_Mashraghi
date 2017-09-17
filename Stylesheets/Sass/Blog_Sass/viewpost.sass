@@ -1,0 +1,66 @@
+.article-content
+  padding: 40px 0
+    top: 15px
+.article-ft-fi
+  position: relative
+  @include background-cc(cover, center)
+  &::before
+    @include overlay(rgba(0,0,0,0.4))
+.article-featured-text
+  position: relative
+  z-index: 11
+  padding: 12em 0
+  text-align: center
+  #article-featured-title
+    margin-bottom: 10px
+  >
+    h1, span, p
+      color: $white
+    span
+      text-transform: uppercase
+      font-size: 90%
+    p
+      width: 80%
+      margin: 0 auto
+.blog-center
+  max-width: 750px
+  margin: 0 auto
+.article-body
+  ol, ul
+    margin: 0 0 1.313em 1.655em
+  img
+    border-radius: 8px
+  p, img
+    margin:
+      bottom: 20px
+  h1, h2, h3
+    margin:
+      bottom: 10px
+  .intro-p
+    margin-top: 20px
+    font:
+      size: 120%
+    &::first-letter
+      font:
+        size: 300%
+        weight: 900
+      float: left
+      margin: 4px 6px 3px 0
+      line-height: 45px
+.quote
+  text-align: center
+  margin: 20px 0
+  padding: 20px 0
+  color: $headings-color
+  border:
+    top: 1px solid #ccc
+    bottom: 1px solid #ccc
+  p
+    font:
+      size: 120%
+      weight: 300
+  span
+    font-size: 100%
+@media all and (max-width: 400px)
+  #article-featured-title
+    font-size: 200%

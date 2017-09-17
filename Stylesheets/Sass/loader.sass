@@ -1,0 +1,51 @@
+//center the loader
+div.loader
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 999
+  div.loader-content
+    .logo
+      margin-bottom: 15px
+
+//loader styling
+.spinner
+  width: 40px
+  height: 40px
+  position: relative
+  left: 25px
+
+.double-bounce1
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  background-color: $light-moss-green
+  opacity: 0.6
+  position: absolute
+  top: 0
+  left: 0
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out
+  animation: sk-bounce 2.0s infinite ease-in-out
+
+.double-bounce2
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  background-color: $wild-blue-yonder
+  opacity: 0.6
+  position: absolute
+  top: 0
+  left: 0
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out
+  animation: sk-bounce 2.0s infinite ease-in-out
+  -webkit-animation-delay: -1.0s
+  animation-delay: -1.0s
+
+//Add animation to "page content"
+.animate-bottom
+  position: relative
+  -webkit-animation-name: animatebottom
+  -webkit-animation-duration: 1s
+  animation-name: animatebottom
+  animation-duration: 1s

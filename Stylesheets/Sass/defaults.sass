@@ -1,0 +1,68 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+body
+  font-family: $body-font
+  font-size: 100%
+  color: $body-color
+  line-height: 1.7
+  overflow-x: hidden
+//headings
+@for $i from 1 through 6
+  h#{$i}
+    font-family: $headings-font
+    font-weight: normal
+    color: $headings-color
+    margin-bottom: 20px
+//set heading size
+$heading-size: 300% 250% 200% 165% 135% 115%
+@for $i from 1 through 6
+  h#{$i}
+    font-size: nth($heading-size, $i)
+//paragraphs
+p
+  font-size: 100%
+  margin-bottom: 20px
+  color: $body-color
+img
+  max-width: 100%
+  height: auto
+  vertical-align: middle
+//prevents parent div with floated children from collapsing
+section, div
+  &::after
+    @include clearfix
+//Anchor Tags
+a
+  color: $button
+  text-decoration: none
+  @include transition(all, 0.2s, ease-in-out)
+  &:hover
+    color: $button-hover
+  &:focus
+    outline: 0
+//center Content
+.center-content
+  max-width: 1600px
+  width: 85%
+  margin: 0 auto
+//max width
+.max-width
+  max-width: 1400px
+  margin: 0 auto
+  width: 100%
+//content in a 500px container
+.content-c-w-500
+  width: 500px
+//titles
+.pri-title
+  text-align: center
+  margin-bottom: 30px
+//floats
+.left
+  float: left
+.right
+  float: right

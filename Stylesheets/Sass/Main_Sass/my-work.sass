@@ -1,0 +1,37 @@
+#my-work
+  padding: 0
+.work-cloud
+  border:
+    top: 1px solid #ccc
+    bottom: 1px solid #ccc
+  .row
+    .col-sm-4
+      &:nth-child(1), &:nth-child(2), &:nth-child(4), &:nth-child(5)
+        a
+          border:
+            right: 1px solid #ccc
+            bottom: 1px solid #ccc
+      &:nth-child(3n)
+        a
+          padding-right: 1px
+          border:
+            bottom: 1px solid #ccc
+    a
+      //dont forget to set anchor tags to display block if you are floating them
+      //because they will vanish if when you set them to float: none
+      display: block
+      opacity: 0
+      position: relative
+      bottom: -100px
+      @include transition(all, 0.3s, ease-in-out)
+      @include background-cc(cover, center)
+      height: 100%
+      &::after
+        content: ''
+        display: block
+        padding-top: 100%
+@media all and (max-width: 577px)
+  #my-work
+    .work-cloud
+      a
+        border: none

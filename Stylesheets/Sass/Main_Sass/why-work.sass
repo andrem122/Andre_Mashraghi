@@ -1,0 +1,28 @@
+#why-work
+  .section-content
+    @include background-cc(cover, center, fixed)
+  .col-md-4
+    $colors: rgba(159, 187, 204, 0.5) rgba(255, 253, 152, 0.5) rgba(189, 228, 167, 0.5)
+    @for $i from 1 through 3
+      &:nth-child(#{$i})
+        .reason-wrap
+          background-color: nth($colors, $i)
+    .reason-wrap
+      opacity: 0
+      padding: 12%
+      text:
+        align: center
+      h2, p
+        color: $white
+@media all and (min-width: 769px) and (max-width: 1150px)
+  #why-work
+    h2
+      font-size: 170%
+@media all and (min-width: 770px)
+  #why-work
+    .reason-wrap
+      height: 350px
+@media all and (max-width: 320px)
+  #why-work
+    h2
+      font-size: 170%

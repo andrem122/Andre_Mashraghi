@@ -1,0 +1,101 @@
+#blog-intro
+  padding: 50px 0
+    top: 80px
+  background-color: #edeeef
+  .blog-intro-text
+    padding-top: 3em
+    text-align: center
+    .blog-intro-title
+      margin-bottom: 10px
+      span
+        text-transform: uppercase
+        font-size: 90%
+      p
+        width: 80%
+        margin: 0 auto
+.blog-posts
+  position: relative
+  background-color: #edeeef
+  padding: 40px 0
+  .loader
+    top: 10%
+  .blog-post
+    @include transition(all, 150ms, linear)
+.blog-post-img
+  &::after
+    content: ''
+    display: block
+    padding-top: 100%
+  @include background-cc(cover, center)
+.blog-post-top
+  display: block
+  position: relative
+  &:hover
+    > i
+      opacity: 1
+    &::after
+      opacity: 1
+  i
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    opacity: 0
+    z-index: 15
+    @include transition(all, 0.3s, ease-in-out)
+    @include icon($white, rgba(90, 216, 163, 0.6), 50px, 25px)
+  &::after
+    opacity: 0
+    @include transition(all, 0.3s, ease-in-out)
+    @include overlay(rgba(0, 0, 0, 0.6))
+.blog-post-bottom
+  background-color: $white
+  padding: 20px
+  border-top: 0
+  h3
+    overflow: hidden
+    text-overflow: ellipsis
+    margin-bottom: 0
+    font-size: 150%
+    margin:
+      bottom: 10px
+    &:hover
+      color: #5AD8A3
+    @include transition(all, 0.3s, ease-in-out)
+  span
+    display: block
+    margin:
+      bottom: 10px
+  p
+    line-height: 1.7
+    color: $body-color
+  .button
+    margin:
+      bottom: 0
+    padding: 8px 20px
+  i
+    font-size: 130%
+    margin:
+      left: 5px
+@media all and (max-width: 1195px)
+  .blog-post-bottom
+    h3
+      font-size: 135%
+@media all and (max-width: 959px)
+  .blog-post:hover
+    transform: none
+@media all and (max-width: 915px)
+  .blog-post-bottom
+    h3
+      font-size: 125%
+@media all and (max-width: 769px)
+  .blog-post-bottom
+    h3
+      font-size: 150%
+@media all and (max-width: 430px)
+  .blog-post-bottom
+    h3
+      font-size: 130%
+  .article-featured-text
+    > span
+      font-size: 80%

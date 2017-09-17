@@ -1,0 +1,45 @@
+#sign-up
+  color: $white
+  padding: 13% 0
+  @include background-cc(cover, center, fixed)
+  #sign-up-title
+    margin-bottom: 4%
+    text-align: left
+  p
+    margin-bottom: 5%
+    color: $white
+  .form-group
+    label
+      display: block
+      margin-bottom: 2%
+      font-size: 120%
+    input
+      &[type="text"], &[type="email"]
+        margin:
+          bottom: 4%
+        height: 2.65em
+        border-radius: 4px
+        padding: 0 10px
+        font-size: 120%
+        border: none
+      &[type="text"]:focus, &[type="email"]:focus
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6)
+        outline: 0
+      &[type="email"]
+        margin-bottom: 8%
+    .submit-btn
+      display: block
+      width: 100%
+      border: none
+      &:focus
+        outline: 0
+@media all and (max-width: 993px)
+  #sign-up
+    background-attachment: scroll
+@media all and (max-width: 430px)
+  #sign-up .form-group
+    label
+      font-size: 100%
+    input
+      &[type="text"], &[type="email"]
+        font-size: 90%

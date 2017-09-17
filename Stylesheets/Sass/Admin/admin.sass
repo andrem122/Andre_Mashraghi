@@ -1,0 +1,551 @@
+@charset "UTF-8"
+
+/* Mixins
+@mixin background($width, $height, $position, $repeat: no-repeat)
+  -webkit-background-size: $width $height
+  -moz-background-size: $width $height
+  -o-background-size: $width $height
+  -ms-background-size: $width $height
+  background-size: $width $height
+  background-position: $position $position
+  background-repeat: $repeat
+
+@mixin background-cc($size, $position, $attach: scroll, $repeat: no-repeat)
+  -webkit-background-size: $size
+  -moz-background-size: $size
+  -o-background-size: $size
+  -ms-background-size: $size
+  background-size: $size
+  background-position: $position $position
+  background-repeat: $repeat
+  background-attachment: $attach
+
+@mixin overflow($value)
+  -webkit-overflow: $value
+  -moz-overflow: $value
+  -o-overflow: $value
+  -ms-overflow: $value
+  overflow: $value
+
+@mixin transition($property, $time, $easing)
+  -webkit-transition: $property $time $easing
+  -moz-transition: $property $time $easing
+  -ms-transition: $property $time $easing
+  -o-transition: $property $time $easing
+  transition: $property $time $easing
+
+@mixin transform($property, $value)
+  -webkit-transform: $property + '(' + $value + ')'
+  -moz-transform: $property + '(' + $value + ')'
+  -ms-transform: $property + '(' + $value + ')'
+  -o-transform: $property + '(' + $value + ')'
+  transform: $property + '(' + $value + ')'
+
+@mixin border($size, $type, $color)
+  -webkit-border: $size $type $color
+  -moz-border: $size $type $color
+  -ms-border: $size $type $color
+  -o-border: $size $type $color
+  border: $size $type $color
+
+@mixin accent($percentage, $height, $color, $left: none, $right: none)
+  content: ''
+  display: block
+  position: absolute
+  top: 50%
+  width: 99999px
+  height: $height
+  border-top: 2px solid $color
+  border-bottom: 2px solid $color
+  left: $left
+  right: $right
+
+@mixin hover-border($color: $body-color)
+  content: ''
+  display: block
+  border-bottom: 1px solid $color
+  width: 0
+
+@mixin clearfix
+  content: ''
+  display: block
+  height: 0
+  visibility: hidden
+  clear: both
+
+/* Variables
+
+/* Colors
+$white: #fff
+$body-color: #787f8c
+/* Main Website Colors
+$canary: #fffd98
+$light-moss-green: #bde4a7
+$ash-grey: #b3d2b2
+$wild-blue-yonder: #9fbbcc
+$dark-pastel-blue: #7a9cc6
+
+/*Buttons
+$button-shadow-color: #74a05b
+
+/* Social Colors
+$facebook-color: #3C599F
+/* Heading Color
+$headings-color: #5c5c5c
+
+/* Font Families
+$body-font: 'Oxygen', sans-serif
+$headings-font: 'Oxygen', sans-serif
+
+/* Main CSS Styles
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+
+body
+  font-family: $body-font
+  font-size: 100%
+  color: $body-color
+  line-height: 1.4
+  width: 100%
+  position: relative
+
+/* Headings
+h1, h2, h3, h4, h5, h6
+  font-family: $headings-font
+  color: $headings-color
+
+h1
+  font-size: 220%
+
+h2
+  font-size: 200%
+  font-weight: 900
+
+h3
+  font-size: 160%
+  font-weight: 900
+
+p
+  font-size: 100%
+  line-height: 1.7
+
+img
+  max-width: 100%
+  height: auto
+  vertical-align: middle
+
+/* Prevents Parent div with floated children from collapsing
+section::after
+  @include clearfix
+
+/* Anchor Tags
+a
+  color: #5AD8A3
+  text-decoration: none
+  @include transition(all, 0.2s, ease-in-out)
+  &:hover
+    color: #20C47F
+  &:focus
+    outline: 0
+
+/* Center Content
+.center-content
+  max-width: 1600px
+  width: 85%
+  margin: 0 auto
+  &::after
+    @include clearfix
+
+/* Center text box in post
+.post-center
+  max-width: 720px
+  margin: 1.5em auto
+/* Row
+.row
+  width: 100%
+  display: block
+
+/* Columns
+.col-2, .col-3, .col-4,
+.col-2-3, .col-17, .col-2-m,
+.col-3-m, .col-4-m, .col-2-3-m,
+.col-10-m, .col-17-m
+  float: left
+
+.col-2
+  width: 47%
+  margin-right: 5%
+
+.col-2-3
+  width: 66.6%
+  margin-right: 4%
+
+.col-3
+  width: 31%
+  margin-right: 3.5%
+
+.col-4
+  width: 22%
+  margin-right: 4%
+
+.col-17
+  width: 17%
+  margin-right: 3%
+
+/* Column Margins for last child
+div
+  .col-2:last-child, .col-3:last-child, .col-4:last-child, .col-2-3:last-child div .col-17:last-child
+    margin-right: 0%
+
+/* Clearfixes for all columns so that parent div doesn't collapse
+.col-2, .col-3, .col-4,
+.col-2-3, .col-17, .col-2-m,
+.col-3-m, .col-4-m, .col-2-3-m,
+.col-17
+  &::after
+    @include clearfix
+
+/* Marginless Columns
+.col-2-m
+  width: 50%
+
+.col-3-m
+  width: 33.33%
+
+.col-4-m
+  width: 25%
+
+.col-2-3-m
+  width: 66.6%
+
+.col-17-m
+  width: 17%
+
+/* If I want a column with no margin on the bottom
+.col-2.marginless-column-b, .col-3.marginless-column-b, .col-4.marginless-column-b, .col-2-3.marginless-column-b
+  margin-bottom: 0
+
+/* If I want a column with no margin on the right
+.col-2.marginless-column-r, .col-3.marginless-column-r, .col-4.marginless-column-r, .col-2-3.marginless-column-r
+  margin-right: 0
+
+/* Display Flex Containers
+
+/* '.flexbox' centers content in a section element vertically
+.flexbox
+  display: flex
+  align-items: center
+
+/* '.flex-center-h-v' centers content horizontally and vertically
+.flex-center-h-v
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+
+/* Styles for the Body Elements Begins
+.main-content-wrapper
+  max-width: 1600px
+
+/* Single Content in a Section Container
+.content-c-w-500
+  width: 500px
+
+/* Buttons
+.button, .facebook-btn
+  display: inline-block
+  text-decoration: none
+  color: $white
+  padding: 15px 30px
+  font-size: 100%
+  text-transform: uppercase
+  @include transition(all, 150ms, linear)
+  background-color: $light-moss-green
+  box-shadow: 0 4px 0 $button-shadow-color
+  border-radius: 3px
+  &:active
+    @include transform(translateY, 4px)
+    box-shadow: none
+  &:hover
+    color: $white
+
+/* Icon Styling
+.icon-m-btn-right
+  margin-right: 0.26em
+
+.icon-m-right
+  margin-right: 4%
+
+/* Navigation Mobile Menu Icons
+.icon-round
+  height: 30px
+  width: 30px
+  text-align: center
+  border-radius: 50%
+  color: $white
+  &::before
+    line-height: 30px
+
+.home-b-color
+  background-color: $canary
+
+.briefcase-b-color
+  background-color: $light-moss-green
+
+.envelope-b-color
+  background-color: $dark-pastel-blue
+
+.pencil-b-color
+  background-color: $wild-blue-yonder
+
+.gamepad-b-color
+  background-color: $ash-grey
+
+/* Forms
+.form-container
+  margin:
+    top: 30px
+
+label
+  display: block
+  margin:
+    bottom: 5px
+input, textarea, #categories
+  font:
+    size: 100%
+    family: $body-font
+  display: block
+  margin:
+    bottom: 20px
+  color: $body-color
+  padding: 10px
+  border-radius: 4px
+  border: 1px solid #ccc
+  @include transition(all, 300ms, ease-in-out)
+  &:focus
+    box-shadow: 0 4px 8px #ddd
+    outline: 0
+
+#categories
+  &:focus
+    box-shadow: none
+
+input
+  width: 100%
+
+input.button
+  &:focus
+    box-shadow: none
+
+textarea
+  width: 100%
+
+input.button
+  display: block
+  width: 100%
+/* Error and Success Boxes
+.success-box, .error-box
+  display: inline-block
+  padding: 15px 20px
+  border-radius: 4px
+  position: absolute
+  left: 50%
+  top: 10%
+  border: 1px solid #ccc
+  transition: all 300ms ease-in-out
+
+.success-box
+  color: #57c15e
+
+.error-box
+  color: #e85371
+
+/* Navigation
+#navbar-border
+  border-bottom: 1px solid #ccc
+
+.nav-bar-inner
+  min-height: 60px
+
+.logo
+  float: left
+  margin-top: 7.5px
+  svg
+    fill: #211f1f
+
+.main-menu
+  float: left
+  margin-left: 70px
+  > ul > li
+    display: inline-block
+    list-style: none
+    > a
+      display: inline-block
+      color: #787f8c
+      text-decoration: none
+      line-height: 60px
+      margin-right: 50px
+      &:hover
+        color: #2d2323
+      &::after
+        content: ''
+        display: block
+        border-bottom: 1px solid $body-color
+        width: 0
+        @include transition(all, 150ms, ease-in-out)
+        @include transform(translateY, -13px)
+      &:hover::after
+        width: 130%
+
+/* Mobile Navigation
+.mobile-button
+  font-size: 2.2em
+  color: #211f1f
+  float: right
+  padding: 3px 30px
+  margin-top: 6px
+  display: none
+  &:hover
+    color: #211f1f
+
+.icon-close-div
+  height: 60px
+  font-size: 2.2em
+  color: #211f1f
+  cursor: pointer
+
+.icon-close
+  float: right
+  margin:
+    top: 13px
+    right: 25px
+
+.mobile-menu
+  position: fixed
+  right: -280px
+  bottom: 0
+  top: 0
+  width: 270px
+  background-color: $white
+  box-shadow: (-2px) 0 10px rgba(0, 0, 0, 0.75)
+  z-index: 999
+  opacity: 1
+  display: none
+  > ul > li
+    list-style: none
+    border-bottom: 1px solid #ddd
+    &:first-child
+      border-top: 1px solid #ddd
+    > a
+      display: block
+      padding: 1em
+      color: #2d2323
+/* New Post
+.post-center
+  padding: 40px 0
+  > h2
+    margin:
+      bottom: 20px
+
+/* Admin Home Page Styles
+/* Post and Comment count
+.post-count, .comment-count
+  margin:
+    right: 3%
+    top: 40px
+  border: 1px solid $body-color
+  padding: 30px
+  text-align: center
+  span
+    font:
+      size: 140%
+
+/* Login Page Styles
+.html-login
+  min-height: 100%
+  height: 100%
+
+.facebook-btn
+  background-color: $facebook-color
+  box-shadow: 0 4px 0 #0e40b5
+  text-transform: none
+  font-size: 120%
+  > i
+    margin-right: 4px
+
+.facebook-login
+  text-align: center
+  border: 1px solid $body-color
+  padding: 50px 20px
+  width: 280px
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4)
+  p
+    margin:
+      bottom: 15px
+/* Delete Posts Styles
+.form-container
+  margin:
+    bottom: 40px
+
+/* Responsive Styles
+
+/* From Desktop to Mobile Devices
+@media all and (max-width: 959px)
+
+  /* When mobile button is clicked, overflow hidden added to
+  /* body and html container to prevent scrolling
+  .b-h-overflow-hidden
+    @include overflow(hidden)
+    position: relative
+    width: 100%
+    height: 100%
+    min-height: 100%
+
+  .mobile-menu, .mobile-trigger
+    display: block
+
+  .main-menu
+    display: none
+
+  .col-2, .col-3, .col-4, .col-2-3, .col-2-m, .col-3-m, .col-4-m, .col-2-3-m
+    float: none
+    width: 100%
+
+  .col-2, .col-3, .col-4, .col-2-3
+    margin-bottom: 14%
+  div
+    .col-2:last-child,
+    .col-3:last-child,
+    .col-4:last-child,
+    .col-2-3:last-child
+      margin-bottom: 0
+
+  .button
+    display: block
+
+  .flex-center-h-v-m
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+
+@media all and (max-width: 430px)
+  h1
+    font-size: 180%
+
+  h2
+    font-size: 200%
+  p
+    font-size: 90%
+  .button
+    font-size: 100%
+
+  .title
+    font-size: 200%
+
+  .content-c-w-500
+    width: 100%

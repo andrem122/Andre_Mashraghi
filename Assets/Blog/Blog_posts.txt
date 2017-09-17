@@ -1,0 +1,83 @@
+For intro paragraph: <p class="intro-p"></p>
+For quotes: <aside class="quote">
+              <p>Never get high off your own supply</p>
+              <span class="quote-author">
+                    — Andre Mashraghi
+              </span>
+            </aside>
+For Images: <img src="" alt="" />
+For h2's: <h2>Steps to Awesomness</h2>
+For h3's: <h3>1. Eat Awesome Cereal</h3>
+<-----Example----->
+<p class="intro-p">
+       So you ipsum dolor sit amet, consectetur adipiscing elit.
+       Vivamus elementum porttitor blandit. Pellentesque habitant
+       morbi tristique senectus et netus et malesuada fames ac turpis
+       egestas. Pellentesque eget quam dui. Quisque id dui a massa.
+     </p>
+     <h2>Be More Awesome</h2>
+     <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Vivamus elementum porttitor blandit. Pellentesque habitant
+       morbi tristique senectus et netus et malesuada fames ac turpis
+       egestas. Pellentesque eget quam dui. Quisque id dui a massa
+       finibus vestibulum vel quis libero. Aliquam nec sem molestie,
+       ornare massa at, tincidunt dui. Duis vehicula elit in dignissim
+       accumsan. Cras interdum, mauris sit amet fermentum consectetur,
+       nisl mi venenatis nibh, id rhoncus metus augue sed dui. Fusce
+       a felis pharetra, vestibulum tellus eu, mattis ipsum. Phasellus
+       ut vestibulum eros, eu viverra sem. Mauris egestas, libero at
+       fringilla aliquam, tellus est tempor magna, ut rhoncus arcu ligula
+       eu urna. Vivamus sed enim nunc. Ut quis quam sagittis, sodales
+       purus at, imperdiet dolor. Quisque dapibus risus sit amet imperdiet
+       facilisis. Aliquam erat volutpat. Phasellus quis facilisis nulla.
+       Donec diam risus, tincidunt in orci non, consectetur dictum eros.
+     </p>
+     <aside class="quote">
+       <p>
+         Never spend the principal!
+       </p>
+       <span class="quote-author">
+         — Andre Mashraghi
+       </span>
+     </aside>
+     <h2>Steps to Awesomness</h2>
+     <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Vivamus elementum porttitor blandit. Pellentesque habitant
+       morbi tristique senectus et netus et malesuada fames ac turpis
+       egestas. Pellentesque eget quam dui. Quisque id dui a massa
+       finibus vestibulum vel quis libero. Aliquam nec sem molestie,
+       ornare massa at, tincidunt dui. Duis vehicula elit in dignissim
+       accumsan. Cras interdum, mauris sit amet fermentum consectetur,
+       nisl mi venenatis nibh, id rhoncus metus augue sed dui. Fusce
+       a felis pharetra, vestibulum tellus eu, mattis ipsum. Phasellus
+       ut vestibulum eros, eu viverra sem. Mauris egestas, libero at
+       fringilla aliquam, tellus est tempor magna, ut rhoncus arcu ligula
+       eu urna. Vivamus sed enim nunc. Ut quis quam sagittis, sodales
+       purus at, imperdiet dolor. Quisque dapibus risus sit amet imperdiet
+       facilisis. Aliquam erat volutpat. Phasellus quis facilisis nulla.
+       Donec diam risus, tincidunt in orci non, consectetur dictum eros.
+     </p>
+     <h3>1. Eat Awesome Cereal</h3>
+     <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Vivamus elementum porttitor blandit. Pellentesque habitant
+       morbi tristique senectus et netus et malesuada fames ac turpis
+       egestas. Pellentesque eget quam dui. Quisque id dui a massa
+       finibus vestibulum vel quis libero. Aliquam nec sem molestie,
+       ornare massa at, tincidunt dui. Duis vehicula elit in dignissim
+       accumsan. Cras interdum, mauris sit amet fermentum consectetur,
+       nisl mi venenatis nibh, id rhoncus metus augue sed dui. Fusce
+       a felis pharetra, vestibulum tellus eu, mattis ipsum. Phasellus.
+     </p>
+     <img src="https://s21.postimg.org/i1lvol8d3/bitmap.png" alt="cereal">
+     <h3>2. Do Awesomness</h3>
+     <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Vivamus elementum porttitor blandit. Pellentesque habitant
+       morbi tristique senectus et netus et malesuada fames ac turpis
+       egestas. Pellentesque eget quam dui. Quisque id dui a massa
+       finibus vestibulum vel quis libero. Aliquam nec sem molestie.
+     </p>
+     <img src="https://s18.postimg.org/n7uju9iop/professional.jpg" alt="professional">

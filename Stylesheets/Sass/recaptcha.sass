@@ -1,0 +1,8 @@
+//resizing the recaptcha
+#rc-imageselect, .g-recaptcha
+  @include transform(scale, 0.80)
+  transform-origin: 0 0
+  -webkit-transform-origin: 0 0
+
+@media all and (max-width: 360px)
+  @include transform(scale, 0.73)

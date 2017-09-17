@@ -1,0 +1,26 @@
+.navigation-btns
+  text-align: center
+  padding: 50px 0
+  .navigation-btn
+    display: inline-block
+    padding: 0.5em 0.8em
+    border: 1px solid $body-color
+    color: $body-color
+    border-radius: 4px
+    &:hover
+      color: $headings-color
+    > i
+      font:
+        size: 140%
+  .prev
+    > i
+      margin-right: 5px
+  .next
+    margin:
+      left: 1.5%
+    > i
+      margin-left: 5px
+@media all and (max-width: 320px)
+  .next
+    margin:
+      top: 8px

@@ -1,0 +1,2 @@
+1. cd C:\Apache24\htdocs\Andre_Mashraghi\Stylesheets
+2. sass --watch Sass/Admin/admin.sass:CSS/Admin/admin.css

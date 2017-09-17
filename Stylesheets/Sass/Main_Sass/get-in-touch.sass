@@ -1,0 +1,44 @@
+#get-in-touch
+  .section-content
+    padding: 60px
+      top: 0
+    .social-icons-wrapper
+      margin:
+        left: auto
+        right: auto
+      max-width: 750px
+      a
+        > i
+          @include transition(all, 0.3s, ease-in-out)
+          @include icon-square($white, none, 80px, 40px)
+@media all and (max-width: 600px)
+  #get-in-touch
+    .section-content
+      padding: 50px 40px
+        top: 0
+@media all and (max-width: 476px)
+  #get-in-touch
+    .section-content
+      .social-icons-wrapper
+        a
+          > i
+            @include icon-square($white, none, 60px, 30px)
+@media all and (max-width: 385px)
+  #get-in-touch
+    .section-content
+      .social-icons-wrapper
+        a
+          > i
+            @include icon-square($white, none, 50px, 25px)
+@media all and (max-width: 339px)
+  #get-in-touch
+    .section-content
+      .social-icons-wrapper
+        text-align: center
+        a
+          width: 100%
+          display: block
+          margin-bottom: 30px
+          > i
+            @include icon-square($white, none, 70px, 35px)
+            width: 100%

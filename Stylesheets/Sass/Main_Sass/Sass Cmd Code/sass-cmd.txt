@@ -1,0 +1,2 @@
+1. cd /var/www/html/Andre_Mashraghi/Stylesheets
+2. sass --watch Sass/Main_Sass/index.sass:CSS/Main_CSS/index.css
