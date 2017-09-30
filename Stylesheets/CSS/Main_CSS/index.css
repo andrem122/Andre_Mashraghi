@@ -97,6 +97,9 @@ a {
   a:focus {
     outline: 0; }
 
+code {
+  font-family: monospace; }
+
 .center-content {
   max-width: 1600px;
   width: 85%;
@@ -106,6 +109,15 @@ a {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%; }
+
+.margin-bottom {
+  margin-bottom: 20px; }
+
+.inline-block {
+  display: inline-block; }
+
+.block {
+  display: block; }
 
 .content-c-w-500 {
   width: 500px; }
@@ -294,6 +306,14 @@ a {
     opacity: 1; } }
 .is-visible {
   animation: posts 200ms ease-in forwards; }
+
+@keyframes expand-code {
+  0% {
+    max-height: 350px; }
+  100% {
+    max-height: 3000px; } }
+.animate-full-height {
+  animation: expand-code 1s ease-in forwards; }
 
 .row {
   width: 100%;
@@ -1684,6 +1704,7 @@ h6 {
   font-size: 100%;
   text-transform: uppercase;
   margin-bottom: 20px;
+  background-color: transparent;
   -webkit-transition: all 150ms linear;
   -moz-transition: all 150ms linear;
   -ms-transition: all 150ms linear;

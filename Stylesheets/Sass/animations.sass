@@ -176,3 +176,11 @@ $white: #fff
     opacity: 1
 .is-visible
   animation: posts 200ms ease-in forwards
+//expand code
+@keyframes expand-code
+  0%
+    max-height: 350px
+  100%
+    max-height: 3000px
+.animate-full-height
+  animation: expand-code 1s ease-in forwards

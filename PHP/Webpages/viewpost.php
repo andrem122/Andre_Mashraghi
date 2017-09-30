@@ -66,6 +66,7 @@ if($result) {
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous">
     </script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="<?php echo htmlspecialchars($viewpostJs, ENT_QUOTES, 'UTF-8', false); ?>" defer></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>

@@ -54,12 +54,37 @@ $(document).ready(function(){
 
         //reset
         grecaptcha.reset();
-        
+
       });
     });
   }
 
+  function expandCode() {
+
+    var $buttons = $('.expand-code');
+
+    $buttons.click(function() {
+
+      var $codeBlock = $(this).prev();
+      $codeBlock.toggleClass('animate-full-height');
+      
+      if($(this).text() === 'Expand Code') {
+
+        $(this).text('Collapse Code');
+
+      } else {
+
+        $(this).text('Expand Code');
+
+      }
+
+    });
+
+  }
+
   ajaxMessages('#form-comment', '.form-messages', '/PHP/Form Scripts/comment-form.php');
+  expandCode();
+  PR.prettyPrint();
 
   $menuTrigger.click(function(){
 
